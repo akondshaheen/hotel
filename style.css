@@ -11,18 +11,19 @@
 #travel_advisory{
     color: rgb(255, 153, 0);
     font-size: 24px;
-    
-}
+  }
 
 /***breaking news**/
+
 .breaking-news-headline {
     display: block;
     position: absolute;
     font-family: arial;
-    font-size: 13px;
+    font-size: 12px;
     margin-top: -22px;
     color: white;
-    margin-left: 150px;
+    margin-left: 120px;
+    
     
   }
   
@@ -68,13 +69,16 @@
   
   #breaking-news-colour {
     height: 30px;
-    width: 694px;
+    width: 62vw;
     background-color: #3399FF;
+    
+    
   }
   
   #breaking-news-container {
     height: 30px;
     width: 694px;
+    top: 62px;
     overflow: hidden;
     position: absolute;
     &:before {
@@ -139,14 +143,16 @@
 
 
   /*Search box*/
-  .search_box{
-    float: right;
-}
+.search_box{
+float: right;
+margin-right: 10px;
+
+  }
 
 
 form.search_box input[type=text] {
     
-    padding: 10px;
+  padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
   float: left;
@@ -164,10 +170,16 @@ form.search_box input[type=text] {
     cursor: pointer;
   }
 
+  #nav_logo{
+    width: 100px; 
+    float: left; 
+    height: 48px;
+  }
+
 
 /* Style the navbar */
 .topnav {
-  width: 100%;
+  
     overflow: hidden;
     background-color: #e9e9e9;
     display: inline;;
@@ -182,13 +194,16 @@ form.search_box input[type=text] {
     padding: 14px 15px;
     text-decoration: none;
     font-size: 17px;
+    
 
   }
   
   /* Navbar links on mouse-over */
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: cyan;
+
     color: black;
+  
   }
   
   /* Active/current link */
@@ -222,17 +237,19 @@ form.search_box input[type=text] {
     padding: 6px;
     margin-top: 8px;
     margin-right: 16px;
-    background: #ddd;
+    margin-left: 5px;
+    background: rgb(20, 223, 88);
     font-size: 17px;
     border: none;
     cursor: pointer;
+
   }
   
   .topnav .login-container button:hover {
     background: #ccc;
   }
   
-  /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+  /** Add responsiveness - On small screens, display the navbar vertically instead of horizontally 
   @media screen and (max-width: 600px) {
     .topnav .login-container {
       float: none;
@@ -248,9 +265,10 @@ form.search_box input[type=text] {
     .topnav input[type=text] {
       border: 1px solid #ccc;
     }
-  }
+  }**/
   
  /* booking button*/
+ 
  .myButton {
         box-shadow: 0px 1px 0px 0px #f0f7fa ;
         background: linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
@@ -265,11 +283,13 @@ form.search_box input[type=text] {
         padding: 6px 24px;
         text-decoration: none;
         text-shadow: 0px -1px 0px #5b6178;
+        border: none;
         
         margin-top: 8px;
         outline: none;
     
 }
+
 
 .myButton:hover {
 	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
@@ -281,28 +301,64 @@ form.search_box input[type=text] {
 	top:1px;
 }
 
+body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
 
 .hotel_picture{
-  width: 100%;
+  width: 500%;
   height: 400px;
+
+  background-repeat: repeat-x;
+  animation: sun 50s linear infinite;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+ 
 }
-  
+@keyframes sun{
+  100%{
+    transform: translateX(-3400px);
+  }
+}
+  .booking{
+    position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  }
 
 /*Booking form*/
 #booking_form{
-  margin: 30px;
+ 
+  /*margin: 30px;*/
+padding:  50px 20px;
+ background-color: rgb(1,154,210, .2);
+border-radius: 25px 10px;
+ position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+
 }
 
 .booking_input{
-  
-  width: 15px;
-  padding: 3px;
+ padding: 3px;
+  width: 130px;
   border-radius: 15px;
-  width: auto;
-  margin-right: 27px;
+  margin-right: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 2px 4px 3px;
   outline: none;
+  text-align: center;
+ 
+}
+.booking_input:first-of-type{
+  width: 145px;
  
 }
 
@@ -319,6 +375,7 @@ form.search_box input[type=text] {
 /*confidence*/
 #side_by_side{
   display: flex;
+  margin-top: 30px;
 }
 #confidence_image{
   border-radius: 5px;
@@ -327,39 +384,75 @@ form.search_box input[type=text] {
 }
 
 #confidence{
+  border-radius: 5px;
   align-self: center;
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 200px;
-overflow: hidden;
-  padding: 20px;
+ 
+  display: block;
+  overflow: hidden;
+  padding: 10px 20px 10px 20px;
   margin-left: 20px;
   margin-right: 20px;
-}
+  }
 #confidence p{
   line-height: 1.5;
-  white-space: pre-wrap;
-  overflow: hidden;
+  padding-bottom: 30px;
 }
-
+#more{
+  display: none;
+}
 #cards{
   margin-top: 30px;
  display: flex;
  flex-direction: row;
  justify-content: space-around;
  border-radius: 5px;
+ margin-bottom: 30px;
  
 }
 .card{
+  width: 30vw;
   border-radius: 45px 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgb(238, 148, 116);
+  
+}
+.card_image{
+border-radius: 45px 5px; 
+ width:90%;
+
+}
+
+.container p{
+  padding: 10px;
 }
 
 .card h4{
-  font-size: 20px;
+  font-size: 90%;
   text-align: center;
   font-family: cursive;
 }
+
+#app{
+  padding-top: 20px;
+background-color: rgb(74, 175, 243);
+text-align: center;
+height: 220px;
+margin-top: 20px;
+
+}
+.fa-desktop,.fa-mobile{
+  width: 200px;
+  padding: 15px;
+  border-radius: 40px;
+  background-color:white;
+  color:black;
+  font-size: 40px;
+  margin-left: 10px;
+}
+
 
 #counting{
   position: relative;
@@ -406,25 +499,7 @@ overflow: hidden;
 time{
   font-size: 0.7rem;
 }
-.counting_container:last-child{
-  opacity: 70%;
-}
 
-#app{
-  padding-top: 20px;
-background-color: rgb(74, 175, 243);
-text-align: center;
-height: 220px;
-margin-top: 20px;
-
-}
-.fa-desktop,.fa-mobile{
-  width: 200px;
-  padding: 20px;
-  border-radius: 40px;
-  background-color:white;
-  color:black;
-}
 
 footer{
   background-color: #1a1a1a;
@@ -438,4 +513,21 @@ footer h1{
 }
 footer p{
   color: #666666;
+}
+
+
+
+/*toggle bar*/
+#toggle_bar{
+  font-size: 26px;
+  margin: 10px;
+  display: none;
+}
+
+#toggle{
+  display: none;
+}
+
+body{
+  overflow-x: hidden;
 }

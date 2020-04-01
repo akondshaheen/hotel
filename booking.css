@@ -57,3 +57,19 @@ select{
     margin-bottom: 100px;
 }
 
+.container:hover{
+    opacity: .7;
+}
+
+
+.container:focus{
+    outline: 2px solid var(--clr-primary);
+    outline-offset: 5px;
+    
+}
+.myButton:focus{
+    background: green;
+}
+::-moz-focus-inner{
+    border: 0;
+}
